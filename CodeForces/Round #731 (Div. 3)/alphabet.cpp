@@ -11,21 +11,6 @@ int main() {
     for(int b=97; b<97+n; b++){
       for(int c=0; c<s.length(); c++){
         if(s[c] == b){
-          c1 += 1;
-          break;
-        }
-      }
-    }
-    for(int b=0; b<s.length(); b++){
-      for(int c=0; c<s.length(); c++){
-        if(b != c && s[b] == s[c]){
-          dupe = true;
-        }
-      }
-    }
-    for(int b=97; b<97+n; b++){
-      for(int c=0; c<s.length(); c++){
-        if(s[c] == b){
           if(b == 97){front = c; back = c;}
           if(s[back-1] == b+1){
             c2 += 1;
@@ -37,7 +22,7 @@ int main() {
         } 
       }
     }
-    if(c1 != s.length() || dupe == true || (s.length() > 1 && c2 != s.length())){
+    if(s.length() > 1 && c2 != s.length()){
       arr[a] = "NO";
     } else {
       arr[a] = "YES";
