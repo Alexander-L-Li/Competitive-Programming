@@ -5,46 +5,40 @@ using namespace std;
 
 int main() {
   int t; cin >> t;
-  string ans[t];
-  for(int a=0; a<t; a++){
-    int k, n, m; cin >> k >> n >> m;
-    int arr[n], arr2[m]; vector <int> v; bool done = false; int count = 0; v.clear();
-    int tn = 0, tm = 0;
+  while(t--){
+    int k, n, m; cin >> k >> n >> m; int arr[n], arr2[m];
     for(int b=0; b<n; b++){
       cin >> arr[b];
     }
     for(int b=0; b<m; b++){
       cin >> arr2[b];
     }
-    for(int b=0; b<n; ++b){
-      if(arr[b] == 0){
-        v.push_back(0);
-      } else if(arr[b] > 0 && arr[b] > tn){
-        v.push_back(arr[b]);
-        tn = arr[b];  
-        count += 1;
+    vector <int> ans; int p1 = 0, p2 = 0;
+    bool done = false;
+    while(p1 != n || p2 != m){
+      if(p1 != n && arr[p1] == 0){ 
+          ans.push_back(0);
+          p1++; k++;
+      } else if(p2 != m && arr2[p2] == 0){
+          ans.push_back(0);
+          p2++; k++;
+      } else if(p1 != n && arr[p1] <= k){
+          ans.push_back(arr[p1++]);
+      } else if(p2 != m && arr2[p2] <= k){
+          ans.push_back(arr2[p2++]);
       } else {
-        done = true;
+          cout << -1;
+          done = true;
+          break;
       }
     }
-    for(int b=0; b<m; ++b){
-      if(arr[b] == 0){
-        v.push_back(0);
-      } else if(arr[b] > 0 && arr[b] > tm){
-        v.push_back(arr[b]);
-        tm = arr[b];
-        count += 1;
-      } else {
-        done = true;
+
+    if(!done){
+      for(int b=0; b<ans.size(); b++){
+        cout << ans[b] << " ";
       }
     }
-    string s = "";
-    for(int b=0; b<v.size(); b++){
-      s += to_string(v[b]);
-    }
-    ans[a] = s;
+    cout << "\n";
   }
-  for(int a=0; a<t; a++){
-    cout << ans[a] << "\n";
-  }
+  
 }
