@@ -14,7 +14,6 @@ int main() {
   for(int a=0; a<m; a++){
     for(int b=a; b<n*m+a; b+=m){
       for(int c=n*m+a; c<n*2*m; c+=m){
-        cout << pos[b] << pos[c] << a << "\n";
         if(pos[b] == pos[c]){
           equal = true;
         }
