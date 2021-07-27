@@ -1,4 +1,4 @@
-## CSES Practice Problems
+# CSES Practice Problems
 
 - Introductory Problems: (**11/19 problems**)
 - Sorting and Searching: (**0/35 problems**)
@@ -13,4 +13,4 @@
 - Additional Problems I: (**0/38 problems**)
 - Additional Problems II: (**0/39 problems**)
 
-# __**Total Solved (12/300 problems) - Last Updated: 7/27/21**__
+### __**Total Solved (12/300 problems) - Last Updated: 7/27/21**__
