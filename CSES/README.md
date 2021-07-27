@@ -1,4 +1,4 @@
-# CSES Practice Problems
+## CSES Practice Problems
 
 - Introductory Problems: (**11/19 problems**)
 - Sorting and Searching: (**0/35 problems**)
