@@ -1,3 +1,4 @@
-## Problems 2015-2021
+## USACO Bronze Contest Problems
 
-40/72 Problems Solved
+- Problems Dated: December 2015 - US Open 2021 
+- 40/72 Problems Solved
