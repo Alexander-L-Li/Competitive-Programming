@@ -1,10 +1,12 @@
-#include <bits/stdc++.h>
+#include <iostream>
+#include <vector>
+#include <algorithm>
 
 using ll = long long;
 using namespace std;
 
-ll merge(int arr[], int l, int mid, int r){
-  ll inv = 0;
+int merge(int arr[], int l, int mid, int r){
+  int inv = 0;
   int n1 = mid - l + 1;
   int n2 = r - mid;
   int a[n1];
