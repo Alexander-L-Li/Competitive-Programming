@@ -1,6 +1,6 @@
 ## CSES Practice Problems
 
-- Introductory Problems: (**13/19 problems**)
+- Introductory Problems: (**14/19 problems**)
 - Sorting and Searching: (**4/35 problems**)
 - Dynamic Programming: (**0/19 problems**)
 - Graph Algorithms: (**1/36 problems**)
@@ -13,4 +13,4 @@
 - Additional Problems I: (**0/38 problems**)
 - Additional Problems II: (**0/39 problems**)
 
-#### __**Total Solved: (18/300 problems) - Last Updated: 8/1/21**__
+#### __**Total Solved: (18/300 problems) - Last Updated: 8/5/21**__
