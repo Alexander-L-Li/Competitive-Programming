@@ -13,4 +13,4 @@
 - Additional Problems I: (**0/38 problems**)
 - Additional Problems II: (**0/39 problems**)
 
-#### __**Total Solved: (18/300 problems) - Last Updated: 8/5/21**__
+#### __**Total Solved: (21/300 problems) - Last Updated: 8/12/21**__
