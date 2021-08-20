@@ -66,21 +66,19 @@ void setIO(string name = ""){
 }
 
 void solve(){
-    int n; cin >> n;
-    int x = sqrt(n);
-    if(x * x == n){
-        cout << x * 4 << endl;
+    int l, r, d;
+    cin >> l >> r >> d;
+    if(d < l || d > r){
+        cout << d << endl;
     } else {
-        int y = sqrt(n) + 1;
-        int z = (y*y - n)/y;
-        cout << (y * 4) - (2 * z) << endl;
+        cout << (r/d + 1) * d << endl;
     }
 }
 
 int main(){
     setIO();
     int t = 1; 
-    //cin >> t;
+    cin >> t;
     while(t--){
         solve();
     }
