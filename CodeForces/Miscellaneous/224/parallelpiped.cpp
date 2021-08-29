@@ -50,14 +50,6 @@ template<class T> using pqg = priority_queue<T, vector<T>, greater<T>>;
 const char nl = '\n';
 const int MAXN = 1e9;
 
-int gcd(int a, int b){
-    if(a == 0){
-        return b;
-    } else {
-        return gcd(b % a, a);
-    }
-}
-
 void solve(){
     int a, b, c; cin >> a >> b >> c;
     int x = sqrt(a * c/b), y = sqrt(a * b/c), z = sqrt(b * c/a);
