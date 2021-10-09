@@ -2,7 +2,6 @@
 #include <algorithm>
 #include <vector>
 #include <queue>
-#include <cmath>
 
 typedef long long ll;
 
@@ -46,9 +45,10 @@ int main(){
         speed++;
     }
     int ans = (int)currt;
-    if(currt - ans < 0.5){
-        cout << currt;
+    double x = currt - ans;
+    if(x < 0.5){
+        cout << ans;
     } else {
-        cout << currt + 1;
+        cout << ans + 1;
     }
 }
