@@ -1,4 +1,4 @@
 # Competitive-Programming
-Code library for every single programming practice problem I have done...
+Code library for every single practice problem I have done
 
 - Languages: C++, Java
