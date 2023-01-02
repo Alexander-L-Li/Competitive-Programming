@@ -1,0 +1,44 @@
+Harry’s Discovery
+Harry the squirrel has found an old vertical pinball machine in the forest. He calls up his friends to share his discovery. Unlike normal pinball machines, the ball always hits the top nail of the R rows of nails (1 <= R <= 25) and then will hit either the right or left nail underneath. This repeats until the ball hits the bottom row. The ball never veers more than ½ nail away from the nail it just hit.
+This game also has scoring that's unique: you get points Xij (0<= Xij <= 3,000) for each little nail you hit on the way down. Harry's friends want to maximize their score on this machine. What is the best score they can achieve?
+
+Here's an example triangle and a good route:
+
+            7                        *7
+          3   8                    *3   8
+        8   1   0                *8   1   0
+      2   7   4   4             2  *7   4   4
+    4   5   2   6   5         4  *5   2   6   5
+In the sample above, the route from 7 to 3 to 8 to 7 to 5 produces the highest sum: 30. It's not possible to go from 7 to 8 to 8 -- the 8 on the third row is too far away.
+
+INPUT FORMAT
+
+Line 1: A single integer: R
+Lines 2.. R + 1: Line i +1 contains i space-separated integers that makes up the scores of row R of the pinball machine: Xi1, Xi2, etc.
+
+OUTPUT FORMAT
+
+Line 1: A single integer that is the highest possible score
+
+SAMPLE INPUT
+
+5
+10
+6 12
+1 5 1
+5 6 9 1
+9 8 12 12 3
+SAMPLE OUTPUT
+
+48
+The following path for the ball achieves the maximum possible score of 48
+
+             10                               *10
+
+           6   12                            6  *12
+
+         1   5   1                         1  *5   1
+
+       5   6   9   1                     5   6  *9   1
+
+    9   8   12   12   3               9   8   12  *12   3
