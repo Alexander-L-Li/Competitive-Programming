@@ -1,0 +1,32 @@
+This problem is the same as 'Stack of Acorns' problem but this time you need to implement it with Complete Search (with bitmasking). 
+
+Harry has invented a new game to play with his woodland friends. One animal retrieves a set of N (3 <= N <= 20) acorns from a tree. Each acorn is one unit tall and has a unique width and depth.
+
+A second animal tries to pick acorns from the set to make the tallest stack. Only acorns with smaller width and depth than the acorn currently on the top of the stack can be added to the top.  Acorns can not be rotated.
+
+Calculate the highest possible tower of acorns that can be stacked.
+
+
+INPUT FORMAT
+
+* Line 1: A single integer: N
+
+* Lines 2 .. N+1: Each line describes an acorn with two space-separated integers: the width and depth
+
+OUTPUT FORMAT
+
+* Line 1: The height of the tallest possible tower of acorns that can be built.
+
+SAMPLE INPUT
+
+6
+3 6
+6 2
+89 36
+7 34
+3 4
+5 10
+SAMPLE OUTPUT
+
+4
+These acorns can be stacked in this order for a height of 4: 89 36, 7 34, 5 10, 3 6.
