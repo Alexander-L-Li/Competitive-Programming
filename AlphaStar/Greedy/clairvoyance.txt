@@ -1,0 +1,25 @@
+Harry the squirrel is playing cards with Bunny the rabbit. Bored with the other card games, Harry wants to make up a new one. The rules for the game are simple. They take a deck of 2N cards, each card numbered from 1 to 2N. They then divide them into N cards for Harry and N cards for Bunny. The two players play for N rounds. Each round Harry and Bunny both play a card, and the player with the highest card earns a point. However, Harry doesn’t tell Bunny that he has clairvoyance when it comes to card games and can easily predict the order that Bunny will play his cards.
+
+Calculate the maximum number of points Harry can win.
+
+INPUT FORMAT
+
+The first line of input contains the value of N (1 <= N <= 50,000).
+
+The next N lines contain the cards that Bunny will play in each of the successive rounds of the game. Note that it is easy to determine Harry’s cards from this information.
+
+OUTPUT FORMAT
+
+Output a single line giving the maximum number of points Harry can score.
+
+SAMPLE INPUT
+
+4
+4
+1
+3
+7
+SAMPLE OUTPUT
+
+4
+Harry plays his cards in this order: 5, 2, 6, 8
