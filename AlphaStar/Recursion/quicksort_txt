@@ -1,0 +1,41 @@
+Quicksort is a type of divide and conquer algorithm for sorting an array, based on a partitioning routine.
+
+It runs in O(NlgN) time for randomly distributed arrays.
+
+The details of this partitioning can vary somewhat, so that quicksort is really a family of closely related algorithms.
+
+Implement quick sort algorithm using the following partitioning method:
+
+Choose the last element in the partition (subarray to be sorted) as the pivot.
+Visit the partition elements one by one starting with the first one.
+For any element that is smaller than or equal to the pivot, swap it with the left-most element in the partition that is larger than pivot.
+INPUT FORMAT:
+
+Line 1: A single integer N (1 < N <= 500)
+Lines 2: N numbers space separated to be sorted
+SAMPLE INPUT:
+
+10
+8 1 2 7 1 5 2 7 4 4 
+OUTPUT FORMAT:
+
+Line 1..?: The list of numbers after each partitioning process.
+SAMPLE OUTPUT:
+
+1 2 1 2 4 4 7 7 8 5 
+1 2 1 2 4 4 7 7 8 5 
+1 2 1 2 4 4 7 7 8 5 
+1 1 2 2 4 4 7 7 8 5 
+1 1 2 2 4 4 5 7 8 7 
+1 1 2 2 4 4 5 7 7 8  
+OUTPUT DETAILS:
+
+The steps of the first partitioning process. The pivot is marked with < >.
+
+Initial:  8 1 2 7 1 5 2 7 4 <4>
+Step 1 :  1 8 2 7 1 5 2 7 4 <4>
+Step 2 :  1 2 8 7 1 5 2 7 4 <4>
+Step 3 :  1 2 1 7 8 5 2 7 4 <4>
+Step 4 :  1 2 1 2 8 5 7 7 4 <4>
+Step 5 :  1 2 1 2 4 5 7 7 8 <4>
+Step 6 :  1 2 1 2 4 <4> 7 7 8 5
