@@ -1,0 +1,41 @@
+There are N (3 <= N <= 250) friends, numbered 1..N, playing a game at a sleepover. In the game, they sit in a circle. One player at a time walks around the circle from their chair, also numbered 1..N. When it is the i th person’s turn to move, they move clockwise to the i th chair in that direction (so if it were player 3’s turn, they would move from chair 3 to 6 if N >= 6). 
+
+When player i arrives at their new chair, anybody originally sitting there will displace and follow the process described above. This process continues until someone ends up in an empty chair or someone is asked to move twice, in which the game ends and this player wins. Player 1 always starts, so their chair will be the empty one. Determine which player will win.
+
+As an example, consider these four players: 
+
+ 4   -   1
+(         )
+ 3   -   2
+First, player 1 walks one space and taps player 2, who rises. (The * denotes the empty chair.)
+ 4   -   *
+(         )
+ 3   -   1
+      
+Player 2 walks 2 spaces and taps player 4, who rises:
+  2   -    *
+ (         )
+  3   -    1
+  
+Player 4 will walk 4 spaces and comes across its own chair which is occupied by 2:
+  
+  2   -    *
+ (         )
+  3    -   1
+
+Player 4 wins.
+
+INPUT FORMAT
+
+* Line 1: An integer N
+
+OUTPUT FORMAT
+
+* Line 1: The player number of the winner
+
+SAMPLE INPUT
+
+4
+SAMPLE OUTPUT
+
+4
