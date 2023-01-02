@@ -1,0 +1,55 @@
+There are N (1 <= N <= 1,000) students numbered 1..N participating in a track and field event, in which multiple students can run at once. Before time t = 0, each student is at the starting line, waiting to run one lap. Each student will finish at the starting line (as the track is circular). 
+
+At time t = 0, runner 1 runs around the track and finishes L_1 seconds later. In general, runner i’s time to run one lap is L_i (1 <= L_i <= 1,000). As soon as the runner re-crosses the starting line, they signal M_1 other runners numbered A_1j to start instantly. In general, runner i signals M_i runners (0 <= M_i <= N) named A_ij (1 <= j <= M_i) to start running. Eventually, every runner runs at least once. M_i can be 0 and no A_ij’s can exist.
+
+Every signaled runner starts running and signalling others to run when finished with the lap. Multiple runners might signal the same runner on accident, so signals after the first one are ignored. 
+
+Compute the total race time (how long it takes when the final runner completes their lap). 
+
+Consider a race with 5 participants. The table below shows the ID of the runner (i), the time it takes for them to run a lap (L_i), the number of runners they will signal (M_i), and the (potentially empty) list of runners they will signal (A_ij): 
+
+i   L_i  M_i   A_i*
+1    3    1    2 
+2    3    2    3 4
+3    8    3    1 4 5
+4    5    0    
+5    4    2    2 3
+Starting runner 1 at time 0 leads to this timeline of events:
+
+  TIME        Event
+     0        Runner 1 starts running
+     3        Runner 1 finishes; signals 2 
+     3        Runner 2 starts running (time to finish: +3 seconds -> 6)
+     6        Runner 2 finishes; signals 3 and 4
+     6        Runner 3 starts running (time to finish: +8 seconds -> 14)
+     6        Runner 4 starts (time to finish: +5 seconds -> 11)
+     11       Runner 4 finishes but has no other runners to signal
+     14       Runner 3 finishes; signals 1, 4, and 5
+     14       Runners 1, 4 ignore the duplicate signal
+     14       Runner 5 starts (time to finish: +4 seconds -> 18)
+     18       Runner 5 finishes; signals 2 and 3 
+     18       Runners 2, 3 ignore duplicate signal
+     18       All runners have finished
+The race lasts 18 seconds.
+
+INPUT FORMAT
+
+* Line 1: An integer N.
+
+* Lines 2..1+N: Line i+1 gives space-separated integers L_i, M_i, and then M_i integers A_ij
+
+OUTPUT FORMAT
+
+* Line 1: A single integer giving the time when the last runner finishes 
+
+SAMPLE INPUT
+
+5
+3 1 2
+3 2 3 4
+8 3 1 4 5
+5 0
+4 2 2 3
+SAMPLE OUTPUT
+
+18
