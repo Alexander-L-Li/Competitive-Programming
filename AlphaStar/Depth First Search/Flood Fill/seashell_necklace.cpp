@@ -23,7 +23,6 @@ bool valid (int x, int y){
 
 void go(int x, int y){
     //perfectly balanced
-    //cout << openCnt << str.size() << str << endl;
     if(2*openCnt == str.size()){
         ans = max(ans, 2*openCnt);
         return;
