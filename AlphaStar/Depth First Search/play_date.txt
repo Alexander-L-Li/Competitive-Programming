@@ -1,0 +1,33 @@
+Play Date
+Alice has N students (2 <= N <= 1000) that are numbered 1..N, living in houses that are also numbered 1..N. Conveniently, student i also lives in house i. 
+
+Some houses are connected by one of the N-1 bidirectional paths that students can walk through. Path i connects houses A_i and B_i (1 <= A_i <= N; 1 <= B_i <= N ) and has a length of L_i (1 <= L_i <= 10,000). 
+
+The paths are set up in such a way that between any two distinct houses, there is exactly one way to traverse the paths to get to the other house. Thus, the walkways form a tree. 
+
+Alice wants her students to work on a project together. She doesn’t want her students travelling far as they may not have cars, so she needs your help in computing the lengths of the paths between Q (1 <= Q <= 1,000) pairs of houses (each pair given as a query p1, p2 (1 <= p1 <= N; 1 <= p2 <= N).
+
+Below is a diagram illustrating four students’ houses with paths from house 1 to 3 with a length of 5; path from house 2 to house 4 with length of 4; path from house 3 to house 2 with length of 2.
+
+INPUT FORMAT
+
+Line 1: Two space-separated integers: N and Q
+Lines 2..N: Line i+1 contains three space-separated integers: A_i, B_i, and L_i
+Lines N+1..N+Q: Each line contains two space-separated integers representing two distinct houses between which Alice wants to find the distance between: p1 and p2
+OUTPUT FORMAT
+
+Line 1..Q: Print the length between the two houses in the corresponding query
+SAMPLE INPUT
+
+4 2
+1 3 5
+2 4 4
+3 2 2
+3 1
+2 1
+SAMPLE OUTPUT
+
+5
+7
+Query 1: The path between house 3 and house 1 has length 5.
+Query 2: The path between house 2 and house 1 involves crossing the path from house 2 to house 3 and the path from house 3 to house 1, for a total length of 7.
