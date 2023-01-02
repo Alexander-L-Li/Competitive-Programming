@@ -1,0 +1,33 @@
+Harry the squirrel loves taking walks in the forest. Everyday he takes a new path back to his treehouse so that he can walk through different parts of the forest. The entire forest can be represented as a R (1 <= R <= 20) rows by C (1 <= C <= 30) columns grid. Walkable parts of the forest are denoted as “.” and unwalkable parts are denoted as “R”. Plot (1, 1) is the upper left corner of this forest “grid”. Harry will always travel towards his treehouse which will always be eastwards and southwards of him. Therefore, Harry can only take steps East and South.
+
+Calculate how many different routes that Harry can take home before he has to repeat the same route.
+
+As an example, consider this layout of the forest:
+
+H . . .       H = Harry    . = plot for walking
+. R . .       R = unwalkable terrain
+. . T .       T = Treehouse
+Here are the two ways he can walk to the treehouse:
+
+H#### .  H . . . 
+. R # .  # R . . 
+. . T .  ####T .
+INPUT FORMAT
+
+Line 1: Two space- separated integers: R and C
+
+Lines 2 ..R + 1: Line i+1 represents row i and contains C space-separated elements that represent plots in the field. Harry's position and treehouse position are represented with 'B' in the input. Top left B represents Harry, bottom right B represents treehouse.
+
+OUTPUT FORMAT
+
+Line 1: A single integer that is the number of unique paths from Harry to the treehouse. The answer will not exceed 2,000,000,000.
+
+SAMPLE INPUT
+
+3 4
+B . . .
+. R . .
+. . B .
+SAMPLE OUTPUT
+
+2
