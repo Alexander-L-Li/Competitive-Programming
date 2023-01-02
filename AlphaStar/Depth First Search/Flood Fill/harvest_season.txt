@@ -1,0 +1,53 @@
+Harvest Season
+It is harvest season in Alice and Bob’s farm. The farm is a 5x5 grid of 1 meter by 1 meter squares, with (1, 1) being the upper-left square and (5, 5) being the lower-right square: 
+
+(1,1) (1,2) (1,3) (1,4) (1,5)
+(2,1) (2,2) (2,3) (2,4) (2,5)
+(3,1) (3,2) (3,3) (3,4) (3,5)
+(4,1) (4,2) (4,3) (4,4) (4,5)
+(5,1) (5,2) (5,3) (5,4) (5,5)
+Every square in this grid has an abundant amount of ripe fruit, except for K empty squares (0 <= K <= 22, K even) with no fruits. Alice starts picking fruit in square (1,1), which always contains crops, and Bob starts picking fruit at square (5,5), which also is guaranteed to have fruit crops.
+
+Every hour, Alice and Bob finish picking the fruit in their respective square and move to an adjacent square (North, South, East, or West). They want to finish picking all the crops and end in the same final square to celebrate their efforts together. Compute the amount of ways this can occur. Alice and Bob always move onto squares that contain fruit, and they never pick fruit on the same square except for the last square. 
+
+INPUT FORMAT
+
+Line 1: Integer K
+Line 2..1+K: A line describing the location (i, j) of a square that is empty 
+OUTPUT FORMAT
+
+Line 1: A single integer giving the different possible ways Alice and Bob can travel the field to pick all the fruit and end in the same square
+SAMPLE INPUT
+
+10
+1 3
+1 4
+1 5
+2 1
+3 1
+4 1
+4 5
+5 1
+3 2
+3 3
+The initial grid is shown below (where . denotes a square with fruit, x denotes an empty square, a gives Alice’s starting location, and b gives Bob’s starting location):
+
+a  .  x  x  x
+x  .  .  .  .
+x  x  x  .  .
+x  .  .  .  x
+x  .  .  .  b
+SAMPLE OUTPUT
+
+1
+There is only possible solutions, where Alice and Bob end at square (3, 4):
+
+a--a  x  x  x
+   | 
+x  a--a--a--a
+            |
+x  x  x b/a-a
+         |
+x  b--b--b  x
+   |
+x  b--b--b--b 
