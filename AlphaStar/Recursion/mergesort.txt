@@ -1,0 +1,36 @@
+Implement merge sort algorithm.
+
+INPUT FORMAT:
+
+Line 1: A single integer N (1 < N <= 500)
+Lines 2: N numbers space separated to be sorted
+SAMPLE INPUT:
+
+10
+8 1 2 7 1 5 2 7 4 4 
+OUTPUT FORMAT:
+
+Line 1..?: The list of numbers in each step
+SAMPLE OUTPUT:
+
+1 8 2 7 1 5 2 7 4 4 
+1 2 8 7 1 5 2 7 4 4 
+1 2 8 1 7 5 2 7 4 4 
+1 1 2 7 8 5 2 7 4 4 
+1 1 2 7 8 2 5 7 4 4 
+1 1 2 7 8 2 5 7 4 4 
+1 1 2 7 8 2 5 7 4 4 
+1 1 2 7 8 2 4 4 5 7 
+1 1 2 2 4 4 5 7 7 8 
+OUTPUT DETAILS:
+
+Initial:  8 1 2 7 1 5 2 7 4 4 
+Step 1 :  1 8
+Step 2 :  1 2 8
+Step 3 :        1 7
+Step 4 :  1 1 2 7 8
+Step 5 :            2 5
+Step 6 :            2 5 7
+Step 7 :                  4 4
+Step 8 :            2 4 4 5 7 
+Step 9 :  1 1 2 2 4 4 5 7 7 8 
