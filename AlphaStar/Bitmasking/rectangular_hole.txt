@@ -1,0 +1,33 @@
+This problem is the same as ‘Rectangular Hole’ but this time you need to implement it using Complete Search (with bitmasking). 
+
+Butters the bunny recently discovered a hole in his yard, which could be very dangerous for all his kids as they hop around. He wants to fill the hole with acorns of different sizes to ensure the safety of his kids.
+
+Butters has N acorns (1 <= N <= 20) each of some height H_i (1 <= H_i <= 1,000,000). The hole has a size of B (1 <= B <= S), where S is the sum of all of Butters’ acorns.
+
+To fill up the hole, one or more of the acorns are stacked on top of each other so that their total height is the sum of the heights of the acorns. This total height must at least be the size of the hole to completely fill up the hole.
+
+However, Butters is still worried about the possibility that one of his kids may trip if the stack of acorns is much taller than the ground. Your job is to find a set of acorns that produce the smallest possible height to completely fill up the hole. In your program, print the minimal ‘excess’ height between the optimal acorn stack and the length of the hole.
+
+
+INPUT FORMAT
+
+* Line 1: Two space-separated integers: N and B
+
+* Lines 2..N+1: Line i+1 contains a single integer: H_i
+
+OUTPUT FORMAT
+
+* Line 1: A single integer that gives the non-negative difference between the total height of the optimal set of acorns and the height of the hole. 
+
+SAMPLE INPUT
+
+5 14
+4
+4
+1
+8
+3
+SAMPLE OUTPUT
+
+1
+We use the acorns 1, 4, and 5 for a total height of 4 + 8 + 3 = 15. The difference between the total height and height of the hole is 15-14 = 1. 
