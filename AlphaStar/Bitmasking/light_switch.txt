@@ -1,0 +1,26 @@
+Nila is in charge of 20 light switches. The switches can either be on or off. She wants all switches to be off. However, when she flips a switch, she must flip that switch and also the switches on either side of the wall (for a total of 3 flips, or if it's an end switch, 2 switches). Given the initial state of the switches (1 = on, 0 = off), what is the minimum number of switches to turn all the switches off?
+
+
+INPUT FORMAT
+
+* Line 1: A single line with 20 space-separated integers
+
+OUTPUT FORMAT
+
+* Line 1: The minimum number of switches necessary for all the switches to be off (i.e. to 0). A solution is guaranteed to exist. 
+
+SAMPLE INPUT
+
+1 1 0 1 1 0 0 0 1 1 1 0 0 0 1 1 1 0 0 0 
+SAMPLE OUTPUT
+
+4
+OUTPUT DETAILS:
+
+Flip the switches at 2, 4, 10, and 15:
+
+1 1 0 1 1 0 0 0 1 1 1 0 0 0 1 1 1 0 0 0  [initial state]
+0 0 1 1 1 0 0 0 1 1 1 0 0 0 1 1 1 0 0 0  [after flipping switch 2]
+0 0 0 0 0 0 0 0 1 1 1 0 0 0 1 1 1 0 0 0  [after flipping switch 4]
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 1 0 0 0  [after flipping switch 10]
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0  [after flipping switch 15]
