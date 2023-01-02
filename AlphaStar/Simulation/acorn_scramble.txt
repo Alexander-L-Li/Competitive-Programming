@@ -1,0 +1,35 @@
+Harry has N acorns (1 <= N <= 100), each labeled from 1 to N. He has placed them on his mantle and would like to reorder them to make them look more pleasing. Their initial placement can be described as an array A, where the index is the exact order of the acorns. The new more aesthetically pleasing placement will be labeled as array B.
+
+To rearrange the acorns from the "A" ordering to the "B" ordering, Harry makes a number of "circular" shifts.  Each of these circular shifts begins with an acorn moving to its proper location in the "B" ordering, displacing another acorn, which then moves to its proper location, displacing another acorn, and so on, until eventually an acorn ends up in the position initially occupied by the first acorn on the cycle. 
+
+For example: the initial placement might be A = 1 4 3 2 5 and the new placement might be B = 5 1 3 2 4.
+
+In the ordering above, if we start a cycle with acorn 1, it would move to position 2, displacing acorn 4, which moves to position 5, displacing acorn 5, which then moves to position 1, ending the cycle. Harry keeps performing circular shifts until every acorn eventually ends up in its proper location in the "B" ordering. Note that each acorn participates in exactly one circular shift, unless it occupies the same position in the "A" and "B" orderings.
+
+Please compute the number of different circular shifts and the length of the longest circular shift while the acorns are shifted.
+
+INPUT FORMAT
+
+Line 1: one integer: N
+Lines 2.. 1 + N: Line i + 1 contains the integer A(i)
+Lines 2 + N...1 + 2N: Line 1 + N + i contains the integer B(i).
+
+OUTPUT FORMAT
+
+Line 1: Two space-separated integers, the first giving the number of circular shifts and the second giving the number of acorns involved in the longest such shift. If there are no circular shifts, output -1 for the second number.
+
+SAMPLE INPUT
+
+4
+4
+2
+3
+1
+1
+4
+2
+3
+SAMPLE OUTPUT
+
+1 4
+There is only one shift, involving all 4 acorns.
