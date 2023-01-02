@@ -1,0 +1,82 @@
+Harry has 2N (1≤N≤10) acorns. Each of them are painted with a number from 1 to 2N. They are randomly placed in a row. The first acorn in the row is a1; the second is a2, and so on (1≤ai≤2N). Note that the acorns are randomly placed so their index may not correlate with their actual painted number. 
+
+He performs the following algorithm to put them in order.
+
+If there is more than one acorn, then partition the acorns into two equal-sized sub-groups. Sort the first subgroup using this algorithm and then sort the second sub-group, also using this algorithm.
+
+Consider the current set of acorns to be sorted as an equal-length pair of (potentially huge) base 2N numbers. If the second number is smaller than the first one, then swap all the elements of the second one with those elements of the first one.
+
+Harry wants to know how much distance the acorns cover while being moved around during the sorting.
+
+Given the initial configuration of the acorns, process the list according to the algorithm above and then print out:
+
+    * the sum of the total distances traveled by all acorns and
+
+    * the final configuration of the acorns after this 'sorting' procedure.
+
+By way of example, consider this line of 23=8 acorns:
+        6 2 4 1 3 5 7 8
+
+First, Harry will sort each half of the line separately:
+        6 2 4 1 | 3 5 7 8
+
+Since each half still has more than one acorn, Harry will sort those halves separately; starting with the 'first' half:
+        6 2 | 4 1
+
+Partitioning again, Harry makes
+        6 | 2      and        4 | 1
+
+each of which can be sorted by second rule, ultimately yielding:
+        2 | 6      and        1 | 4
+
+The distance traveled by each acorn during the first and second subgroup's sort is 1, so total_distance_moved becomes 4. The new configuration of this sub-group is:
+        2 6 | 1 4
+
+For step 2 of the algorithm on the subgroup above, we compare the two sides lexicographically (2 6 vs. 1 4). Since the 1 comes before 2, we swap the two elements of the first half with the corresponding elements of the second half, yielding:
+        1 4 2 6
+
+Each of the four acorns moved two spaces in this swap, contributing a total of 8 moves, so total_distance_moved becomes 12.
+Consider the other half of the acorns; we divide the list of four into two sub-groups:
+        3 5 | 7 8
+
+Each pair (3, 5) and (7, 8) is already sorted.
+
+Comparing (3 5) to (7 8), since 3 comes before 7, we don’t need to make any swaps.After the operations above, the list looks like this (and it's time for step 2 to be performed on the two groups of 4):
+        1 4 2 6 | 3 5 7 8
+
+Since 1 comes before 5, we don’t need to make any swaps, so we end with
+        1 4 2 6 3 5 7 8
+
+Therefore, the answer is 12 and 1 4 2 6 3 5 7 8.
+
+INPUT FORMAT
+
+Line 1: A single integer N
+Lines 2...2N+1: Line i+1 contains a single integer: ai
+OUTPUT FORMAT
+
+Line 1: an integer (the total distance traveled by all acorns)
+Lines 2..2N+1: Line i+1 will have one integer ( the ith acorn in the final configuration)
+
+SAMPLE INPUT
+
+3
+6
+2
+4
+1
+3
+5
+7
+8
+SAMPLE OUTPUT
+
+12
+1
+4
+2
+6
+3
+5
+7
+8
