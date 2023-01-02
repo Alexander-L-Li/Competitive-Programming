@@ -1,0 +1,33 @@
+Bunny the rabbit just made a big pot of carrot stew for dinner. Bunny’s family is huge, so oftentimes his family members will all clamor and fight for a seat at the dinner table (especially for carrot stew!). Each of N his family members are numbered from 1 to N. Unfortunately there are only M (1≤M≤N≤1000) seats at the dinner table so everyone might not have a seat. Each rabbit starts at a location RXi, RYi (−1,000,000≤RXi≤1,000,000;−1,000,000≤RYi≤1,000,000); the seats can be found at a location SXj, SYj (−1,000,000≤SXj≤1,000,000;−1,000,000≤SYj≤1,000,000).
+
+The rabbits have a method to distribute themselves into the seats. As soon as a rabbit is certain they will get to a seat first, they rush there as fast as they can (all rabbits run equally fast).
+
+The rabbits have no problem jumping over seats, tables, or other rabbits, so they can run in a straight line. When multiple rabbits can reach a seat at the very same time, the oldest rabbit (the one appearing earlier in the input data) gets the seat. Likewise, when a rabbit can be the first to reach multiple seats they will also choose the one appearing earliest in the input.
+Some rabbits won’t be able to grab a seat so Bunny writes their numbers down so that they can have priority next time at the dinner table. (In the case where there are no hungry rabbits, output 0). Help Bunny sort out the dinner table seat situation.
+
+NOTE: Standard distance calculations will likely require an intermediate result that will fit into a 64-bit integer but not into a 32-bit integer.
+
+INPUT FORMAT
+
+Line 1: Two space-separated integers: N and M
+Lines 2...N+1: Line i+1 contains two space separated integers: RXi and RYi
+Lines N + 2...N + M + 1: Line j+N+1 contains two space-separated integers: SXj and SYj.
+
+OUTPUT FORMAT
+
+Lines 1..N-M: Line i contains the number of the ith rabbit that Harry writes down for not having a  seat. The rabbits’ numbers should be listed in increasing order.
+
+SAMPLE INPUT
+
+3 2
+1 0
+1 9
+5 5
+6 10
+3 4
+There are 3 rabbits. Rabbit 1 starts at (1, 0), rabbit 2 starts at (1, 9), rabbit 3 starts at (5, 5). The only seats are at (6, 10) and (3, 4).
+
+SAMPLE OUTPUT
+
+1
+Rabbit 2 will get a seat at (6, 10) and rabbit 3 will get a seat at (3, 4). Rabbit 1 will not get a seat since they are the farthest away from an empty seat.
