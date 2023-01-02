@@ -1,0 +1,39 @@
+Megan captured the view of her dorm from the rooftop with her camera.The entire living area is a W x H arrangement (1 <= W <= 80, 1 <= H <= 1000). Megan wishes to determine the largest contiguous building. A building is contiguous when any grid square in the picture can be connected by traversing adjacent vertical or horizontal squares that are part of the building. Some structures are quite odd (i.e. it is possible that a building is in the shape of a circle that surrounds other circles).
+
+A grid square that is the location of a part of a dormitory is denoted by an asterisk ('*') and the ground is denoted as a period ('.').  Here is a 11 x 5 sample photo: 
+
+. * * . . . . . . . . 
+* * * * . . . . * * * 
+. . . . . * * * * * .  
+. * * . . . . * * * * 
+. * * * . . . . * * .
+This photo shows three contiguous buildings of 6, 14, and 5 grid units:
+
+. a a . . . . . . . . 
+a a a a . . . . b b b 
+. . . . . b b b b b .  
+. c c . . . . b b b b  
+. c c c . . . . b b .  
+Help Megan find the largest contiguous building in her photo.
+
+INPUT FORMAT
+
+* Line 1: Two space-separated integers: W and H
+
+* Line 2..H+1: Each line contains W "*" or "." characters representing the building area in the photo
+
+OUTPUT FORMAT
+
+* Line 1: The number of units of the largest building in the photo
+
+SAMPLE INPUT
+
+11 5
+.**........
+****....***
+.....*****.
+.**....****
+.***....**.
+SAMPLE OUTPUT
+
+14
