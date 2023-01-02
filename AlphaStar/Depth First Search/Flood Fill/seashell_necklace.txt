@@ -1,0 +1,33 @@
+Seashell Necklace
+Harry is at the beach for vacation. He is picking seashells to make a seashell necklace. He wants symmetry in his seashell necklace. For example, if he has 4 left facing seashells (<<<<), he also wants 4 right facing seashells (>>>>) and the final necklace would look like (<<<<>>>>). 
+
+After hunting for seashells all day, he stumbled upon an area on the beach with tons of seashells. This area can be denoted as a N x N grid. The seashells are either facing left or facing right on the sand. Trying to make things more interesting, Harry will only move up, down, left, or right starting from the upper left corner of the seashell grid. Harry will only stop on a spot that has a seashell and pick it up (meaning he can’t go back because he would already have picked up the seashell). Harry will only pick up seashells in a specific order so that his necklace will be symmetrical (perfectly balanced). 
+
+Given the layout of the shells, calculate the length of the necklace after Harry is done picking up all necessary seashells.
+
+INPUT FORMAT
+
+Line 1: An integer N (2 <= N <= 5).
+Lines 2 .. N + 1: Each line contains a string of parentheses of length N. Collectively, these N lines describe an N x N grid of parentheses.
+
+OUTPUT FORMAT
+
+Line 1: The length of the longest perfectly balanced string of Seashells that Harry can collect.  If Harry cannot collect any perfectly balanced string of seashells (e.g., if the upper-left square is a right facing seashell), output 0.
+
+SAMPLE INPUT
+
+4
+<<>>
+<><<
+<<><
+>>><
+SAMPLE OUTPUT
+
+8
+
+The sequence that Harry takes is as follows:
+
+1<>>
+2><<
+345<
+876<
