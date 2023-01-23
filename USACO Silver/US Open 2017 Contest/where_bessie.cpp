@@ -47,11 +47,6 @@ bool dfs(int xstart, int ystart, int xend, int yend){
             }
         }
     }
-    // for(int a=xstart; a<=xend; a++){
-    //     for(int b=ystart; b<=yend; b++){
-    //         cout << visited[a][b];
-    //     } cout << endl;
-    // }
     if(check.size() == 2 && count >= 3){
         auto it = next(check.begin(), 0);
         auto it2 = next(check.begin(), 1);
@@ -86,7 +81,6 @@ int main() {
             }
         }
     }
-    set<string> s;
     if(v.size() == 0){
         cout << 0;
     } else {
